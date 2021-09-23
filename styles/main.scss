@@ -1,0 +1,331 @@
+/* STYLE SECTIONING TAGS */
+* {
+  /* Reset the space of the webpage */
+  margin: 0px;
+  padding: 0px;
+}
+
+/* @media screen and (max-width: 600px) {
+  h4.textWithBlurredBg {
+    font-size: 2vw;
+  }
+  h2.textWithBlurredBg {
+    font-size: 1vw;
+  }
+} */
+
+body,
+html {
+  background-color: #dadada;
+  padding-top: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.myContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0.5rem;
+  background-color: #999999;
+}
+
+.flexItem {
+  flex-basis: 100%;
+  text-align: center;
+}
+.flexLeft {
+  flex-basis: 100%;
+  float: left;
+  text-align: center;
+}
+
+.flexRight {
+  flex-basis: 100%;
+  float: right;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+/* STYLE TEXT */
+h1 {
+  color: black;
+}
+
+p {
+  font-size: 2vw;
+}
+.solid {
+  border-color: #1275db;
+  padding: 0.5rem;
+}
+p.solid {
+  border-style: solid;
+  font-size: 3vw;
+}
+.solidAbout {
+  border-color: #db3327;
+  padding: 0.5rem;
+}
+p.solidAbout {
+  border-style: solid;
+}
+.solidContribute {
+  border-color: #c9db3d;
+  padding: 0.5rem;
+}
+p.solidContribute {
+  border-style: solid;
+}
+
+.homeTag {
+  text-decoration: underline;
+  color: #1275db;
+}
+#homeButton {
+  background-color: #1275db;
+}
+
+.aboutTag {
+  text-decoration: underline;
+  color: #db3327;
+}
+.aboutTag:hover {
+  text-decoration: underline;
+  color: #8f140b;
+}
+#aboutButton {
+  background-color: #db3327;
+}
+
+.contributeTag {
+  text-decoration: underline;
+  color: #c9db3d;
+}
+.contributeTag:hover {
+  text-decoration: underline;
+  color: #9caa31;
+}
+#contributeButton {
+  background-color: #c9db3d;
+}
+
+.resourceLink {
+  color: #212529;
+  text-decoration-color: #c9db3d;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.resourceLink:hover {
+  color: #212529;
+  text-decoration-color: #9caa31;
+}
+
+/* STYLE IMAGES */
+#homeImage {
+  padding: 2rem;
+  max-width: 30rem;
+}
+
+/* WORDS & BLUR ON HOVER*/
+.textWithBlurredBg {
+  max-width: 30rem;
+  display: inline-block;
+  position: relative;
+}
+
+.textWithBlurredBg img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.textWithBlurredBg:hover img {
+  filter: blur(2px) brightness(60%);
+}
+
+.textWithBlurredBg :not(img) {
+  position: absolute;
+  top: 18%;
+  z-index: 1;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.textWithBlurredBg h4 {
+  top: 33%;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.textWithBlurredBg h2 {
+  flex-wrap: wrap;
+  text-align: center;
+  left: 15%;
+  right: 15%;
+}
+
+.textWithBlurredBg:hover :not(img) {
+  opacity: 1;
+}
+
+/* STYLE NAV BAR */
+header {
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.collapsedHome:hover {
+  background-color: #13508f;
+}
+
+.collapsedAbout:hover {
+  background-color: #8f140b;
+}
+
+.collapsedContribute:hover {
+  background-color: #9caa31;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.fixed-links-nav {
+  position: fixed;
+  top: 1rem;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.fixed-top {
+  position: fixed;
+  top: -1rem;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.move {
+  position: relative;
+  top: 3.5rem;
+}
+
+.homeMove {
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-left: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+/* .navbar-toggler-home:hover{
+  background-color: #13508F;
+}
+
+.navbar-toggler-about:hover{
+  background-color: #8F140B;
+}
+
+.navbar-toggler-contribute:hover{
+  background-color: #9CAA31;
+} */
+
+/* STYLE FOOTER */
+.footerHome {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1275db;
+  color: white;
+  text-align: center;
+}
+.footerAbout {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #db3327;
+  color: white;
+  text-align: center;
+}
+.footerContribute {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #c9db3d;
+  color: white;
+  text-align: center;
+}
+
+/*PARALLAX IMAGE & WORDS */
+.outer-container {
+  max-width: 100%;
+  margin: auto;
+  width: 90%;
+  padding: 40px 0px;
+  position: relative;
+}
+.image-container {
+  padding-bottom: 63%;
+  background: black;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  background-size: cover;
+}
+.section-title {
+  margin: 0;
+  font-size: 8vw;
+  position: absolute;
+  top: 50%;
+  padding-top: -40%;
+  padding-left: 5%;
+  transform: translateY(-30%);
+  z-index: 1;
+  white-space: nowrap;
+  text-shadow: 2px 2px 15px black;
+}
+.section-title.on-dark {
+  color: white;
+  top: 50%;
+  max-width: 100%;
+}
+.section-title span {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
